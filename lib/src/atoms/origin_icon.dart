@@ -28,7 +28,11 @@ class OriginIcon extends StatelessWidget {
     this.shape = OriginIconShape.circle,
     this.size = OriginIconSize.large,
   });
+
+  /// The shape of the icon. Can be circle
   final OriginIconShape shape;
+
+  /// The size of the icon. Can be small, medium or large
   final OriginIconSize size;
 
   @override
