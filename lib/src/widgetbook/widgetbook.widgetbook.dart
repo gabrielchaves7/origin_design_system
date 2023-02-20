@@ -122,7 +122,7 @@ class HotReload extends StatelessWidget {
               name: 'atoms',
               widgets: [
                 WidgetbookComponent(
-                  name: 'Logo',
+                  name: 'OriginIcon',
                   useCases: [
                     WidgetbookUseCase(
                       name: 'Default',

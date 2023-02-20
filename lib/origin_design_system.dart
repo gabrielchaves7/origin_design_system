@@ -2,4 +2,4 @@
 library origin_design_system;
 
 //atoms
-export 'src/atoms/logo.dart';
+export 'src/atoms/origin_icon.dart';

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:origin_design_system/assets.dart';
 
-/// The shape of the Logo
-enum LogoShape {
+/// The shape of the Icon
+enum OriginIconShape {
   /// Circle will be with rounded borders
   circle,
 }
 
-/// The size the Logo will be rendered
-enum LogoSize {
+/// The size the Icon will be rendered
+enum OriginIconSize {
   /// small will be 32 x 32
   small,
 
@@ -20,16 +20,16 @@ enum LogoSize {
   large,
 }
 
-/// Widget that loads the svg logo.
-class Logo extends StatelessWidget {
-  ///Creates an Logo
-  const Logo({
+/// Widget that loads the svg Icon.
+class OriginIcon extends StatelessWidget {
+  ///Creates an OriginIcon
+  const OriginIcon({
     super.key,
-    this.shape = LogoShape.circle,
-    this.size = LogoSize.large,
+    this.shape = OriginIconShape.circle,
+    this.size = OriginIconSize.large,
   });
-  final LogoShape shape;
-  final LogoSize size;
+  final OriginIconShape shape;
+  final OriginIconSize size;
 
   @override
   Widget build(Object context) {
@@ -49,9 +49,9 @@ class Logo extends StatelessWidget {
 
   double _getSize() {
     var logoSize = 64.0;
-    if (size == LogoSize.small) {
+    if (size == OriginIconSize.small) {
       logoSize = 32.0;
-    } else if (size == LogoSize.medium) {
+    } else if (size == OriginIconSize.medium) {
       logoSize = 48.0;
     }
 
