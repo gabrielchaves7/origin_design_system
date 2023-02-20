@@ -44,7 +44,7 @@ class OriginIcon extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: SvgPicture.asset(
-        Assets.assets_origin_icon_circle_svg,
+        Assets.origin_design_system$assets_origin_icon_circle_svg,
         semanticsLabel: 'An image representing the logo of Origin',
         fit: BoxFit.cover,
       ),
