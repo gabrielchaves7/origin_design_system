@@ -8,7 +8,8 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:origin_design_system/assets.dart';
-import 'package:origin_design_system/src/widgetbook/usecases/atoms/logo_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/widgetbook.dart';
 import 'package:widgetbook/widgetbook.dart';
 
@@ -121,6 +122,16 @@ class HotReload extends StatelessWidget {
             WidgetbookFolder(
               name: 'atoms',
               widgets: [
+                WidgetbookComponent(
+                  name: 'OriginLogo',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originLogo(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
                 WidgetbookComponent(
                   name: 'OriginIcon',
                   useCases: [
