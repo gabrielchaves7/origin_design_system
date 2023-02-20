@@ -7,6 +7,7 @@ extension OriginTextSpan on TextSpan {
   TextSpan getStyle(TextStyle newStyle) {
     return TextSpan(
       text: text,
+      children: children,
       style: (style == null) ? newStyle : style!.merge(newStyle),
     );
   }
