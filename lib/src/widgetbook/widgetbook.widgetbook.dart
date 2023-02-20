@@ -8,8 +8,11 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:origin_design_system/assets.dart';
+import 'package:origin_design_system/src/atoms/colors.dart';
+import 'package:origin_design_system/src/atoms/origin_logo.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_app_bar_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/widgetbook.dart';
 import 'package:widgetbook/widgetbook.dart';
 
@@ -120,6 +123,23 @@ class HotReload extends StatelessWidget {
           name: 'use cases',
           folders: [
             WidgetbookFolder(
+              name: 'molecules',
+              widgets: [
+                WidgetbookComponent(
+                  name: 'OriginAppBar',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originAppBar(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
+              ],
+              folders: [],
+              isExpanded: true,
+            ),
+            WidgetbookFolder(
               name: 'atoms',
               widgets: [
                 WidgetbookComponent(
@@ -150,6 +170,7 @@ class HotReload extends StatelessWidget {
           widgets: [],
         ),
       ],
+      scaffoldBuilder: scaffoldBuilder,
     );
   }
 }

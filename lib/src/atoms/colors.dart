@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class OriginColors {
   static const Color brandColorPrimary = Color.fromRGBO(0, 28, 149, 1);
   static const Color neutralWhite = Color.fromRGBO(255, 255, 255, 1);
+  static const Color background = Color.fromRGBO(244, 248, 250, 1);
   static const Color blueGray50 = Color.fromRGBO(233, 238, 242, 1);
   static const Color blueGray400 = Color.fromRGBO(77, 100, 117, 1);
   static const Color blueGray600 = Color.fromRGBO(30, 42, 50, 1);
