@@ -1,33 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:origin_design_system/src/atoms/colors.dart';
 
-///Extension for TextSpan, use it to style TextSpan widget.
-extension OriginTextSpan on TextSpan {
-  /// merge the style from current text span with this one
-  TextSpan getStyle(TextStyle newStyle) {
-    return TextSpan(
-      text: text,
-      children: children,
-      style: (style == null) ? newStyle : style!.merge(newStyle),
-    );
-  }
-
-  /// return your textspan style merged with the headingSmall text style
-  TextSpan get headingSmall => getStyle(OriginTextStyles.headingSmall);
-
-  /// return your textspan style merged with the subtitle text style
-  TextSpan get subtitle => getStyle(OriginTextStyles.subtitle);
-
-  /// return your textspan style merged with the subtitleSemibold text style
-  TextSpan get subtitleSemibold => getStyle(OriginTextStyles.subtitleSemibold);
-
-  /// return your textspan style merged with the paragraph text style
-  TextSpan get paragraph => getStyle(OriginTextStyles.paragraph);
-
-  /// return your textspan style merged with the description text style
-  TextSpan get description => getStyle(OriginTextStyles.description);
-}
-
 ///Extension for Text, use it to style Text widget.
 extension OriginText on Text {
   /// merge the style from current text span with this one
