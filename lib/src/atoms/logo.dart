@@ -33,11 +33,17 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(Object context) {
-    return SvgPicture.asset(
-      Assets.assets_origin_icon_circle_svg,
-      semanticsLabel: 'Origin Logo',
+    return Container(
       width: _getSize(),
       height: _getSize(),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+      ),
+      child: SvgPicture.asset(
+        Assets.assets_origin_icon_circle_svg,
+        semanticsLabel: 'Origin Logo',
+        fit: BoxFit.cover,
+      ),
     );
   }
 
