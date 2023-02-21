@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:origin_design_system/origin_design_system.dart';
+import 'package:flutter/services.dart';
 
 /// Default text form field
 class OriginTextField extends StatelessWidget {
@@ -7,6 +8,8 @@ class OriginTextField extends StatelessWidget {
   const OriginTextField({
     required this.label,
     this.icon,
+    this.textInputType,
+    this.inputFormatters,
     super.key,
   });
 
@@ -15,6 +18,12 @@ class OriginTextField extends StatelessWidget {
 
   /// leading icon
   final Widget? icon;
+
+  /// The type of information for which to optimize the text input control
+  final TextInputType? textInputType;
+
+  /// Optional input validation and formatting overrides
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +35,8 @@ class OriginTextField extends StatelessWidget {
           height: OriginSpacing.x,
         ),
         TextField(
+          keyboardType: textInputType,
+          inputFormatters: inputFormatters,
           style: OriginTextStyles.headingSmall.merge(
             const TextStyle(
               color: OriginColors.blueGray600,
