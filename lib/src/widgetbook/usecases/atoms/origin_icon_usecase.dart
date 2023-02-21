@@ -41,5 +41,18 @@ Widget originIcon(BuildContext context) {
         ),
       ],
     ),
+    colorFilter: context.knobs.options(
+      label: 'Color',
+      options: [
+        const widgetbook.Option<ColorFilter?>(
+          label: 'No color',
+          value: null,
+        ),
+        const widgetbook.Option<ColorFilter?>(
+          label: 'Red',
+          value: ColorFilter.mode(Colors.red, BlendMode.srcIn),
+        ),
+      ],
+    ),
   );
 }

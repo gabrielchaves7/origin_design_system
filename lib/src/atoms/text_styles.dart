@@ -9,7 +9,7 @@ extension OriginText on Text {
       data!,
       textAlign: textAlign,
       overflow: overflow,
-      style: (style == null) ? newStyle : style!.merge(newStyle),
+      style: (style == null) ? newStyle : newStyle.merge(style),
     );
   }
 

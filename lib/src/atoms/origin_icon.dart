@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:origin_design_system/src/atoms/colors.dart';
 
 /// The size the Icon will be rendered
 enum OriginIconSize {
@@ -23,6 +24,7 @@ class OriginIcon extends StatelessWidget {
     required this.iconPath,
     super.key,
     this.size = OriginIconSize.large,
+    this.colorFilter,
   });
 
   /// The size of the icon. Can be small, medium or large
@@ -30,6 +32,9 @@ class OriginIcon extends StatelessWidget {
 
   /// The SVG path of the icon to be rendered
   final String iconPath;
+
+  /// The color of the icon
+  final ColorFilter? colorFilter;
 
   @override
   Widget build(Object context) {
@@ -40,6 +45,7 @@ class OriginIcon extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: SvgPicture.asset(
+        colorFilter: colorFilter,
         iconPath,
         semanticsLabel: 'An image representing the logo of Origin',
         fit: BoxFit.cover,
