@@ -3,6 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 /// The size the Icon will be rendered
 enum OriginIconSize {
+  /// xsmall will be 16 x 16
+  extraSmall,
+
   /// small will be 32 x 32
   small,
 
@@ -46,7 +49,9 @@ class OriginIcon extends StatelessWidget {
 
   double _getSize() {
     var logoSize = 64.0;
-    if (size == OriginIconSize.small) {
+    if (size == OriginIconSize.extraSmall) {
+      logoSize = 16.0;
+    } else if (size == OriginIconSize.small) {
       logoSize = 32.0;
     } else if (size == OriginIconSize.medium) {
       logoSize = 48.0;

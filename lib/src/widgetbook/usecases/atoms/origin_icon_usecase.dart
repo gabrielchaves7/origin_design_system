@@ -24,6 +24,10 @@ Widget originIcon(BuildContext context) {
       label: 'Size',
       options: [
         const widgetbook.Option<OriginIconSize>(
+          label: 'Extra small',
+          value: OriginIconSize.extraSmall,
+        ),
+        const widgetbook.Option<OriginIconSize>(
           label: 'Small',
           value: OriginIconSize.small,
         ),
