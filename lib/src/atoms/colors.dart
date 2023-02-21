@@ -13,4 +13,5 @@ class OriginColors {
   static const Color green500 = Color.fromRGBO(4, 199, 97, 1);
   static const Color sun700 = Color.fromRGBO(255, 192, 50, 1);
   static const Color red700 = Color.fromRGBO(211, 42, 54, 1);
+  static const Color shadow = Color.fromRGBO(30, 42, 50, 0.08);
 }
