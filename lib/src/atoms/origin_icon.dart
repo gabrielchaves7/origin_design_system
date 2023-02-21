@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:origin_design_system/src/atoms/colors.dart';
 
 /// The size the Icon will be rendered
 enum OriginIconSize {
-  /// xsmall will be 16 x 16
-  extraSmall,
+  /// 24 x 24
+  xSmall,
 
-  /// small will be 32 x 32
+  /// 32 x 32
   small,
 
-  /// medium will be 48 x 48
+  /// 48 x 48
   medium,
 
-  /// large will be 64 x 64
+  /// 64 x 64
   large,
 }
 
@@ -55,8 +54,8 @@ class OriginIcon extends StatelessWidget {
 
   double _getSize() {
     var logoSize = 64.0;
-    if (size == OriginIconSize.extraSmall) {
-      logoSize = 16.0;
+    if (size == OriginIconSize.xSmall) {
+      logoSize = 24.0;
     } else if (size == OriginIconSize.small) {
       logoSize = 32.0;
     } else if (size == OriginIconSize.medium) {

@@ -9,6 +9,18 @@ class OriginSpacing {
   /// 16
   static const double xx = 16;
 
+  /// 16
+  static const double xxs = 20;
+
   /// 24
   static const double xxx = 24;
+
+  /// 28
+  static const double xxxs = 28;
+
+  /// 32
+  static const double xxxx = 32;
+
+  /// 36
+  static const double xxxxs = 36;
 }
