@@ -29,9 +29,12 @@ class OriginOutlinedButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(32),
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(
-            OriginColors.brandColorPrimary,
-          ),
+          backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+            if (states.contains(MaterialState.disabled)) {
+              return OriginColors.brandColorPrimaryLight;
+            }
+            return OriginColors.brandColorPrimary;
+          }),
           textStyle: MaterialStateProperty.all<TextStyle>(
             OriginTextStyles.button,
           ),
