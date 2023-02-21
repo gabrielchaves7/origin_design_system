@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:origin_design_system/assets.dart';
-
-/// The shape of the Icon
-enum OriginIconShape {
-  /// Circle will be with rounded borders
-  circle,
-}
 
 /// The size the Icon will be rendered
 enum OriginIconSize {
@@ -24,16 +17,16 @@ enum OriginIconSize {
 class OriginIcon extends StatelessWidget {
   ///Creates an OriginIcon
   const OriginIcon({
+    required this.iconPath,
     super.key,
-    this.shape = OriginIconShape.circle,
     this.size = OriginIconSize.large,
   });
 
-  /// The shape of the icon. Can be circle
-  final OriginIconShape shape;
-
   /// The size of the icon. Can be small, medium or large
   final OriginIconSize size;
+
+  /// The SVG path of the icon to be rendered
+  final String iconPath;
 
   @override
   Widget build(Object context) {
@@ -44,7 +37,7 @@ class OriginIcon extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: SvgPicture.asset(
-        Assets.origin_design_system$assets_origin_icon_circle_svg,
+        iconPath,
         semanticsLabel: 'An image representing the logo of Origin',
         fit: BoxFit.cover,
       ),
