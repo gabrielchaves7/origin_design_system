@@ -35,7 +35,7 @@ class OriginTextStyles {
   static TextStyle get headingSmall => const TextStyle(
         fontFamily: 'Rubik',
         fontWeight: FontWeight.w500,
-        fontSize: 24,
+        fontSize: 20,
         color: OriginColors.blueGray900,
       );
 
@@ -43,7 +43,7 @@ class OriginTextStyles {
   static TextStyle get subtitle => const TextStyle(
         fontFamily: 'WorkSans',
         fontWeight: FontWeight.w400,
-        fontSize: 20,
+        fontSize: 18,
         color: OriginColors.brandColorPrimary,
       );
 
@@ -51,7 +51,7 @@ class OriginTextStyles {
   static TextStyle get subtitleSemibold => const TextStyle(
         fontFamily: 'WorkSans',
         fontWeight: FontWeight.w600,
-        fontSize: 20,
+        fontSize: 18,
         color: OriginColors.brandColorPrimary,
       );
 
@@ -59,7 +59,7 @@ class OriginTextStyles {
   static TextStyle get paragraph => const TextStyle(
         fontFamily: 'WorkSans',
         fontWeight: FontWeight.w400,
-        fontSize: 16,
+        fontSize: 14,
         color: OriginColors.blueGray400,
       );
 
@@ -67,7 +67,15 @@ class OriginTextStyles {
   static TextStyle get description => const TextStyle(
         fontFamily: 'WorkSans',
         fontWeight: FontWeight.w400,
-        fontSize: 14,
+        fontSize: 12,
         color: OriginColors.blueGray900,
+      );
+
+  /// font WorkSans, weight 400 and size 14
+  static TextStyle get button => const TextStyle(
+        fontFamily: 'WorkSans',
+        fontWeight: FontWeight.w500,
+        fontSize: 16,
+        color: OriginColors.neutralWhite,
       );
 }
