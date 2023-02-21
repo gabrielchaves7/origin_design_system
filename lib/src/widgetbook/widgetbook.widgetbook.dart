@@ -6,6 +6,7 @@
 
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:origin_design_system/assets.dart';
 import 'package:origin_design_system/origin_design_system.dart';
@@ -16,6 +17,7 @@ import 'package:origin_design_system/src/molecules/origin_app_bar.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_card_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_outlined_button_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_app_bar_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_text_form_field.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/organisms/origin_page_usecase.dart';
@@ -181,6 +183,16 @@ class HotReload extends StatelessWidget {
                     WidgetbookUseCase(
                       name: 'Default',
                       builder: (context) => originCard(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
+                WidgetbookComponent(
+                  name: 'OriginOutlinedButton',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originOutlinedButton(context),
                     ),
                   ],
                   isExpanded: true,
