@@ -54,5 +54,5 @@ Widget scaffoldBuilder(BuildContext context, WidgetbookFrame frame, Widget child
 
 @WidgetbookTheme(name: 'Dark', isDefault: true)
 ThemeData getDarkTheme() => ThemeData(
-      primarySwatch: Colors.blue,
+      primaryColor: OriginColors.brandColorPrimary,
     );

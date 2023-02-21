@@ -6,7 +6,7 @@ import 'package:origin_design_system/src/organisms/origin_page.dart';
 import '../helpers/pump_app.dart';
 
 void main() {
-  testWidgets('renders origin app bar', (tester) async {
+  testWidgets('renders origin page', (tester) async {
     await tester.pumpApp(
       const OriginPage(
         body: Text('Some text'),
