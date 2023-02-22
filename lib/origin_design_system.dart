@@ -1,6 +1,7 @@
 /// Origin design system.
 library origin_design_system;
 
+export 'src/atoms/breakpoints.dart';
 //atoms
 export 'src/atoms/colors.dart';
 export 'src/atoms/formatters.dart';

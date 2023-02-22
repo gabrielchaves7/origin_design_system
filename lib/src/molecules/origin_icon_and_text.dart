@@ -32,7 +32,7 @@ class OriginIconAndText extends StatelessWidget {
         ...texts
       ],
     );
-    if (MediaQuery.of(context).size.width > 544) {
+    if (OriginBreakpoint.isDesktop(context)) {
       widget = _desktopLayout();
     }
 
