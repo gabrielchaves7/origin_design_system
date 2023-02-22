@@ -19,6 +19,7 @@ import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_u
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_outlined_button_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_app_bar_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_icon_and_text.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_text_form_field.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/organisms/origin_page_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/widgetbook.dart';
@@ -133,6 +134,16 @@ class HotReload extends StatelessWidget {
             WidgetbookFolder(
               name: 'molecules',
               widgets: [
+                WidgetbookComponent(
+                  name: 'OriginIconAndText',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originIconAndText(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
                 WidgetbookComponent(
                   name: 'OriginAppBar',
                   useCases: [
