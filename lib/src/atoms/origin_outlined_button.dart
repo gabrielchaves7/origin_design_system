@@ -18,9 +18,13 @@ class OriginOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(Object context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 56,
+    return Container(
+      constraints: const BoxConstraints(
+        minHeight: 56,
+        maxHeight: 56,
+        maxWidth: 320,
+        minWidth: 320,
+      ),
       child: OutlinedButton(
         onPressed: onPressed,
         style: ButtonStyle(
