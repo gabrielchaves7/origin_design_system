@@ -59,9 +59,11 @@ class OriginIconAndText extends StatelessWidget {
           const SizedBox(
             width: OriginSpacing.xx,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: texts,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: texts,
+            ),
           )
         ],
       );
