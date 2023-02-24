@@ -8,6 +8,7 @@ export 'src/atoms/breakpoints.dart';
 export 'src/atoms/colors.dart';
 export 'src/atoms/formatters.dart';
 export 'src/atoms/origin_card.dart';
+export 'src/atoms/origin_graph.dart';
 export 'src/atoms/origin_icon.dart';
 export 'src/atoms/origin_logo.dart';
 export 'src/atoms/origin_outlined_button.dart';

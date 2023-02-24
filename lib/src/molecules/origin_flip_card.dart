@@ -15,10 +15,10 @@ class OriginFlipCard extends StatelessWidget {
   });
 
   /// The widget to be rendered in the front of the card
-  final OriginCard front;
+  final Widget front;
 
   /// The widget to be rendered in the back of the card
-  final OriginCard back;
+  final Widget back;
 
   /// The flip card controller to control the card
   final FlipCardController controller;
@@ -29,7 +29,6 @@ class OriginFlipCard extends StatelessWidget {
   @override
   Widget build(Object context) {
     return FlipCard(
-      fill: Fill.fillBack,
       controller: controller,
       front: front,
       back: back,

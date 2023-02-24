@@ -17,6 +17,7 @@ import 'package:origin_design_system/src/atoms/origin_logo.dart';
 import 'package:origin_design_system/src/atoms/spacing.dart';
 import 'package:origin_design_system/src/molecules/origin_app_bar.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_card_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_graph_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_outlined_button_usecase.dart';
@@ -201,6 +202,16 @@ class HotReload extends StatelessWidget {
             WidgetbookFolder(
               name: 'atoms',
               widgets: [
+                WidgetbookComponent(
+                  name: 'OriginGraph',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originGraph(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
                 WidgetbookComponent(
                   name: 'OriginCard',
                   useCases: [
