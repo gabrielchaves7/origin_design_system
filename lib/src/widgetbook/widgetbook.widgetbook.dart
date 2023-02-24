@@ -5,6 +5,8 @@
 // **************************************************************************
 
 import 'dart:core';
+import 'package:flip_card/flip_card.dart';
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,6 +21,7 @@ import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_icon_u
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_logo_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/atoms/origin_outlined_button_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_app_bar_usecase.dart';
+import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_flip_card_usecase.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_icon_and_text.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/molecules/origin_text_form_field.dart';
 import 'package:origin_design_system/src/widgetbook/usecases/organisms/origin_page_usecase.dart';
@@ -135,6 +138,16 @@ class HotReload extends StatelessWidget {
               name: 'molecules',
               widgets: [
                 WidgetbookComponent(
+                  name: 'OriginFlipCard',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originFlipCard(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
+                WidgetbookComponent(
                   name: 'OriginIconAndText',
                   useCases: [
                     WidgetbookUseCase(
@@ -199,21 +212,21 @@ class HotReload extends StatelessWidget {
                   isExpanded: true,
                 ),
                 WidgetbookComponent(
-                  name: 'OriginOutlinedButton',
-                  useCases: [
-                    WidgetbookUseCase(
-                      name: 'Default',
-                      builder: (context) => originOutlinedButton(context),
-                    ),
-                  ],
-                  isExpanded: true,
-                ),
-                WidgetbookComponent(
                   name: 'OriginLogo',
                   useCases: [
                     WidgetbookUseCase(
                       name: 'Default',
                       builder: (context) => originLogo(context),
+                    ),
+                  ],
+                  isExpanded: true,
+                ),
+                WidgetbookComponent(
+                  name: 'OriginOutlinedButton',
+                  useCases: [
+                    WidgetbookUseCase(
+                      name: 'Default',
+                      builder: (context) => originOutlinedButton(context),
                     ),
                   ],
                   isExpanded: true,

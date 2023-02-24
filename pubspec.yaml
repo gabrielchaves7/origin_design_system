@@ -8,6 +8,7 @@ environment:
   flutter: 3.7.1
 
 dependencies:
+  flip_card: ^0.7.0
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.1
