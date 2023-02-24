@@ -25,7 +25,6 @@ class OriginGraph extends StatelessWidget {
   final Color disabledColor;
 
   BoxConstraints get _boxConstraints => const BoxConstraints(
-        minWidth: 84,
         maxWidth: 146,
         minHeight: 16,
         maxHeight: 24,
@@ -36,11 +35,13 @@ class OriginGraph extends StatelessWidget {
     final children = <Widget>[];
     for (var i = 0; i < amount; i++) {
       children.add(
-        Container(
-          constraints: _boxConstraints,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(32),
-            color: i < selectedAmount ? selectedColor : disabledColor,
+        Expanded(
+          child: Container(
+            constraints: _boxConstraints,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(32),
+              color: i < selectedAmount ? selectedColor : disabledColor,
+            ),
           ),
         ),
       );
