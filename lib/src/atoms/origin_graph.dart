@@ -47,8 +47,8 @@ class OriginGraph extends StatelessWidget {
       );
     }
     return Row(
-      children: children,
       mainAxisAlignment: MainAxisAlignment.center,
+      children: children,
     );
   }
 }

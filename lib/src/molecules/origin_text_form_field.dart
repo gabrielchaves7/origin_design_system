@@ -79,7 +79,9 @@ class OriginTextField extends StatelessWidget {
                         iconPath: leadingIconPath!,
                         colorFilter: hasError
                             ? const ColorFilter.mode(
-                                Colors.red, BlendMode.srcIn)
+                                Colors.red,
+                                BlendMode.srcIn,
+                              )
                             : null,
                       ),
                     )

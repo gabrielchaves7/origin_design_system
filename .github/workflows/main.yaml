@@ -1,18 +1,47 @@
-name: ci
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+name: origin_design_system
 
 on:
-  pull_request:
-    branches:
-      - main
+  push:
+    inputs:
+      analyze_directories:
+        required: false
+        type: string
+        default: "lib test"
+      flutter_channel:
+        required: false
+        type: string
+        default: "stable"
+      flutter_version:
+        required: false
+        type: string
+        default: "3.7.1"
 
 jobs:
-  semantic_pull_request:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/semantic_pull_request.yml@v1
+  clone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v3
 
-  build:
-    uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/dart_package.yml@v1
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{inputs.flutter_version}}
+          channel: ${{inputs.flutter_channel}}
+          cache: true
+          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
 
+      - name: ✨ Check Formatting
+        run: dart format --set-exit-if-changed lib test
+
+      - name: 🕵️ Analyze
+        run: flutter analyze ${{inputs.analyze_directories}}
+
+      - name: 🧪 Run UI Tests
+        run: flutter test --test-randomize-ordering-seed random --coverage
+
+      - name: 📊 Check UI Code Coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: "./coverage/lcov.info"
+          min_coverage: 80

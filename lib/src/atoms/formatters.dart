@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 
-/// Use to format inputs for numeric values. If the user types 52000, will became 52,0000
+/// Use to format inputs for numeric values.
+/// If the user types 52000, will became 52,0000
 class NumericTextFormatter extends TextInputFormatter {
   @override
   TextEditingValue formatEditUpdate(
@@ -10,7 +11,8 @@ class NumericTextFormatter extends TextInputFormatter {
     if (newValue.text.isEmpty) {
       return newValue.copyWith(text: '');
     } else if (newValue.text.compareTo(oldValue.text) != 0) {
-      final selectionIndexFromTheRight = newValue.text.length - newValue.selection.end;
+      final selectionIndexFromTheRight =
+          newValue.text.length - newValue.selection.end;
       var value = newValue.text;
       if (newValue.text.length > 2) {
         value = value.replaceAll(RegExp(r'\D'), '');
