@@ -68,8 +68,9 @@ class OriginOutlinedButton extends StatelessWidget {
     if (buttonType == OriginOutlinedButtonType.primary) {
       if (states.contains(MaterialState.disabled)) {
         color = OriginColors.brandColorPrimaryLight;
+      } else {
+        color = OriginColors.brandColorPrimary;
       }
-      color = OriginColors.brandColorPrimary;
     }
 
     return color;
