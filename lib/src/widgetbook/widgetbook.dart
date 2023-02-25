@@ -33,7 +33,8 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart';
   widgetsExpanded: true,
 )
 @WidgetbookScaffoldBuilder()
-Widget scaffoldBuilder(BuildContext context, WidgetbookFrame frame, Widget child) {
+Widget scaffoldBuilder(
+    BuildContext context, WidgetbookFrame frame, Widget child) {
   return Scaffold(
     backgroundColor: context.knobs.options(
       label: 'Background color',
