@@ -46,10 +46,13 @@ class OriginGraph extends StatelessWidget {
         ),
       );
 
-      if (i != amount - 1)
-        children.add(SizedBox(
-          width: OriginSpacing.x,
-        ));
+      if (i != amount - 1) {
+        children.add(
+          const SizedBox(
+            width: OriginSpacing.x,
+          ),
+        );
+      }
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
