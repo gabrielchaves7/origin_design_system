@@ -44,5 +44,5 @@ jobs:
         uses: VeryGoodOpenSource/very_good_coverage@v2
         with:
           path: "./coverage/lcov.info"
-          exclude: 'lib/src/atoms/test_style.dart'
+          exclude: 'lib/src/atoms/test_styles.dart'
           min_coverage: 80
