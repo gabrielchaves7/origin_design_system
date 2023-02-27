@@ -13,7 +13,7 @@ The first thing you need is to setup flutter, please follow the steps:
 
 ### Running the project
 
-Since this project is a package, it's not possible to run it. You need to have origin_widgetbook installed to be able to open and navigate between the components :)
+Since this project is a package, it's not possible to run it. You need to have origin_widgetbook installed to be able to open and navigate between the components :). But you can also open the widgetbook at https://origin-widgetbook.netlify.app.
 
 ## Continuous Integration 🤖
 On each pull request and push, the CI `formats`, `lints`, and `tests` the code. This ensures the code remains consistent and behaves correctly as you add functionality or make changes. The project uses [Very Good Workflows][very_good_coverage_link] for Code coverage.
