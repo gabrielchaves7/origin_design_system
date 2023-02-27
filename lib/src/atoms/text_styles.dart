@@ -63,6 +63,14 @@ class OriginTextStyles {
         color: OriginColors.blueGray400,
       );
 
+  /// paragraph is font WorkSans, weight 400 and size 16
+  static TextStyle get paragraphSemibold => const TextStyle(
+        fontFamily: 'WorkSans',
+        fontWeight: FontWeight.w600,
+        fontSize: 14,
+        color: OriginColors.blueGray400,
+      );
+
   /// font WorkSans, weight 400 and size 14
   static TextStyle get description => const TextStyle(
         fontFamily: 'WorkSans',
